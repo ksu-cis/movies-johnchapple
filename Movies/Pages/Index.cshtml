@@ -18,17 +18,17 @@
         }
     </div>
 
-    <form method="post">
-        <input type="text" name="search" />
-        <label><input type="checkbox" value="G" />Rated G</label>
-        <label><input type="checkbox" value="PG" />Rated PG</label>
-        <label><input type="checkbox" value="PG-13" />Rated PG-13</label>
-        <label><input type="checkbox" value="R" />Rated R</label>
-        <label><input type="checkbox" value="NC-17" />Rated NC-17</label>
+    <form method="post" id="form">
+        <input type="text" name="search" id="search" />
+        <label><input class="mpaa" type="checkbox" value="G" />Rated G</label>
+        <label><input class="mpaa" type="checkbox" value="PG" />Rated PG</label>
+        <label><input class="mpaa" type="checkbox" value="PG-13" />Rated PG-13</label>
+        <label><input class="mpaa" type="checkbox" value="R" />Rated R</label>
+        <label><input class="mpaa" type="checkbox" value="NC-17" />Rated NC-17</label>
 
         <label>
             Minimum IMDB Rating:
-            <input type="number" min="0" max="10" step=".1" name="minIMDB" />
+            <input id="minimdb" type="number" min="0" max="10" step=".1" name="minIMDB" />
             Maxmimum IMDB Rating:
             <input type="number" min="0" max="10" step=".1" name="maxIMDB" />
         </label>

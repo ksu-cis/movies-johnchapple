@@ -9,7 +9,7 @@
     <div id="movie-list">
         @foreach (Movie m in Model.Movies)
         {
-            <div class="movie-entry">
+            <div class="movie-entry" data-title="@m.Title" data-mpaa="@m.MPAA_Rating" data-imdb="@m.IMDB_Rating" data-rt="@m.Rotten_Tomatoes_Rating">
                 <h2>@m.Title @m.Release_Year</h2>
                 <div>Rated @m.MPAA_Rating</div>
                 <div>IMDB @m.IMDB_Rating</div>
@@ -18,13 +18,13 @@
         }
     </div>
 
-    <form method="post">
-        <input type="text" name="search" />
-        <label><input type="checkbox" value="G" />Rated G</label>
-        <label><input type="checkbox" value="PG" />Rated PG</label>
-        <label><input type="checkbox" value="PG-13" />Rated PG-13</label>
-        <label><input type="checkbox" value="R" />Rated R</label>
-        <label><input type="checkbox" value="NC-17" />Rated NC-17</label>
+    <form method="post" id="safform">
+        <input type="text" name="search" id="search" />
+        <label><input type="checkbox" value="G" class="mpaa" />Rated G</label>
+        <label><input type="checkbox" value="PG" class="mpaa" />Rated PG</label>
+        <label><input type="checkbox" value="PG-13" class="mpaa" />Rated PG-13</label>
+        <label><input type="checkbox" value="R" class="mpaa" />Rated R</label>
+        <label><input type="checkbox" value="NC-17" class="mpaa" />Rated NC-17</label>
 
         <label>
             Minimum IMDB Rating:
